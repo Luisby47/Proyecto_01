@@ -65,6 +65,7 @@ public class PersonaAspect implements Filter {
         }catch (Exception e) {
             System.out.println(httpResponse.getStatus());
             httpResponse.setStatus(500); // Asegurarse de que el estado sea 500 en caso de excepción
+            logger.error("Error: {}", e.getMessage());
 
         } finally {
             // Capturar datos después de procesar la petición

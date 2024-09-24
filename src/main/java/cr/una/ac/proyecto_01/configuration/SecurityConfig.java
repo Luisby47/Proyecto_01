@@ -11,8 +11,10 @@ import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 import org.springframework.security.web.SecurityFilterChain;
 
 
+
 @Configuration
 @EnableWebSecurity
+
 public class SecurityConfig {
 
     @Bean
@@ -43,4 +45,6 @@ public class SecurityConfig {
 
         return new InMemoryUserDetailsManager(user, admin);
     }
+
+
 }
